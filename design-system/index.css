@@ -139,3 +139,7 @@ select {
 .text-dark{color: hsl(var(--clr-dark));}
 .text-accent{color: hsl(var(--clr-light));}
 .text-white{color: hsl(var(--clr-white));}
+
+.bg-component{
+    background-color: hsl(var(--clr-light)/ .2);
+}
