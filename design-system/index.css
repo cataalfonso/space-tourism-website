@@ -274,6 +274,8 @@ select {
 
 .underline-indicators > *{
     padding: var(--underline-gap, 1rem) 0;
+    border: 0;
+    cursor:pointer;
     border-bottom: 0.2rem solid hsl(var(--clr-white)/0);
 }
 
@@ -282,7 +284,13 @@ select {
     border-color:hsl(var(--clr-white)/ .5)
 }
 
-.underline-indicators > .active{
-    border-color:hsl(var(--clr-white)/ 1)
+.underline-indicators > .active,
+.underline-indicators > [aria-selected="true"]{
+    border-color:hsl(var(--clr-white)/ 1);
+    color:hsl(var(--clr-white)/ 1)
+}
+
+.tab-list{
+    --gap:2rem;
 }
 
