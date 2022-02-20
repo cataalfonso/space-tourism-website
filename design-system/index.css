@@ -148,6 +148,20 @@ select {
     margin-inline: auto;
 }
 
+.grid-container{
+    display:grid;
+    column-gap: var(--container-gap, 2rem);
+    grid-template-columns: minmax(2rem, 1fr) repeat(2, minmax(0,40rem)) minmax(2rem, 1fr);
+}
+
+.grid-container >*:first-child{
+    grid-column: 2;
+}
+
+.grid-container >*:last-child{
+    grid-column: 3;
+}
+
 /* this class is used by text readers, hide the element visualy, but ii is still there */
 .sr-only{
     position: absolute;
@@ -228,7 +242,7 @@ select {
 
 .large-button{
     position: relative;
-    display:grid;
+    display:inline-grid;
     z-index: 1;
     place-items: center;
     padding: 0 2em;
@@ -313,7 +327,12 @@ select {
 }
 
 .numbered-indicators >*{
+    position: relative;
     cursor:pointer;
+    display:inline-grid;
+    z-index: 1;
+    place-items: center;
+    padding: 0 2em;
     border: 1px solid hsl(var(--clr-white)/ .25);
     border-radius: 50%;
     aspect-ratio:1;
