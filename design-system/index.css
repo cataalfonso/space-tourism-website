@@ -11,12 +11,12 @@
     --clr-white: 0 0% 100%;
 
     /* font-sizes */
-    --fs-900: 9.375rem;
-    --fs-800: 6.25rem;
-    --fs-700: 3.5rem;
-    --fs-600: 2rem;
+    --fs-900: clamp(5rem, 0.5vw + 0.5rem, 9.375rem);
+    --fs-800: 3.5rem;
+    --fs-700: 1.5rem;
+    --fs-600: 1rem;
     --fs-500: 1.75rem;
-    --fs-400: 1.125rem;
+    --fs-400: 0.9375rem;
     --fs-300: 1rem;
     --fs-200: 0.875rem;
 
@@ -25,6 +25,26 @@
       --ff-sans-cond:"Barlow Condensed", sans-serif;
       --ff-sans-normal: "Barlow", sans-serif;
 
+}
+
+@media (min-width: 35em){
+    :root{
+          /* font-sizes */
+    --fs-800: 5rem;
+    --fs-700: 2.5rem;
+    --fs-600: 1.5rem;
+    --fs-400: 1rem;
+    }
+}
+
+@media (min-width: 45em){
+    :root{
+          /* font-sizes */
+    --fs-800: 6.25rem;
+    --fs-700: 3.5rem;
+    --fs-600: 2rem;
+    --fs-400: 1.125rem;
+    }
 }
 
 /* ----------- */
@@ -84,6 +104,8 @@ body {
     min-height: 100vh;
     text-rendering: optimizeSpeed;
     line-height: 1.5;
+    display:grid;
+    grid-template-rows: min-content 1fr;
 }
 
 /* A elements that don't have a class get default styles */
@@ -138,6 +160,10 @@ select {
     gap: var(--gap, 1em);
 }
 
+.d-block{
+    display: block;
+}
+
 .flow > *:where(:not(:first-child))  {
     margin-top: var(--flow-space, 1rem);
 }
@@ -149,17 +175,35 @@ select {
 }
 
 .grid-container{
+    text-align: center;
     display:grid;
-    column-gap: var(--container-gap, 2rem);
-    grid-template-columns: minmax(2rem, 1fr) repeat(2, minmax(0,40rem)) minmax(2rem, 1fr);
+    place-items:center;
+    padding-inline: 1rem;
 }
 
-.grid-container >*:first-child{
-    grid-column: 2;
+.grid-container *{
+    max-width: 50ch;
 }
 
-.grid-container >*:last-child{
-    grid-column: 3;
+@media (min-width: 45em){
+    .grid-container{
+        text-align: left;
+        column-gap: var(--container-gap, 2rem);
+        grid-template-columns: minmax(2rem, 1fr) repeat(2, minmax(0,40rem)) minmax(2rem, 1fr);
+    }
+
+    .grid-container >*:first-child{
+        grid-column: 2;
+    }
+    
+    .grid-container >*:last-child{
+        grid-column: 3;
+    }
+
+    .grid-container--home{
+        padding-bottom: max(6rem, 20vh);
+        align-items: end;
+    }
 }
 
 /* this class is used by text readers, hide the element visualy, but ii is still there */
@@ -241,6 +285,7 @@ select {
 /* ----------- */
 
 .large-button{
+    font-size:2rem;
     position: relative;
     display:inline-grid;
     z-index: 1;
@@ -347,4 +392,32 @@ select {
 .numbered-indicators > [aria-selected="true"]{
     background-color: hsl(var(--clr-white));
     color: hsl(var(--clr-dark))
+}
+
+/* ------------------------- */
+/* Page Specific background*/
+/* ------------------------ */
+
+.body{
+    background-size: cover;
+    background-position: bottom center;
+}
+
+/* Home */
+
+.home{
+    background-image: url(./assets/home/background-home-tablet.jpg);
+}
+
+@media (min-width: 35em){
+    .home{
+        background-position: center center;
+        background-image: url(./assets/home/background-home-tablet.jpg);
+    }
+}
+
+@media (min-width: 45em){
+    .home{
+        background-image: url(./assets/home/background-home-desktop.jpg);
+    }
 }
