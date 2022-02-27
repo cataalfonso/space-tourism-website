@@ -27,7 +27,7 @@
     <script src="./index.js" defer></script>
   </head>
   <body class="home">
-
+    <a class="skip-to-content" href="#main">Skip to content</a>
     <header class="primary-header flex">
       <div>
         <img src="./assets/shared/logo.svg" alt="space tourism logo"/ class="logo">
@@ -36,22 +36,22 @@
       <nav>
         <ul id="primary-navigation" data-visible="false" class="primary-navigation flex underline-indicators">
           <li class="active">
-            <a class="uppercase ff-sans-cond text-white letter-spacing-2" href="index.html"><span>00</span>Home</a>
+            <a class="uppercase ff-sans-cond text-white letter-spacing-2" href="index.html"><span aria-hidden="true">00</span>Home</a>
           </li>
           <li>
-            <a class="uppercase ff-sans-cond text-white letter-spacing-2" href="destination.html"><span>01</span>Destination</a>
+            <a class="uppercase ff-sans-cond text-white letter-spacing-2" href="destination.html"><span aria-hidden="true">01</span>Destination</a>
           </li>
           <li>
-            <a class="uppercase ff-sans-cond text-white letter-spacing-2" href="crew.html"><span>02</span>Crew</a>
+            <a class="uppercase ff-sans-cond text-white letter-spacing-2" href="crew.html"><span aria-hidden="true">02</span>Crew</a>
           </li>
           <li>
-            <a class="uppercase ff-sans-cond text-white letter-spacing-2" href="technology.html"><span>02</span>Technology</a>
+            <a class="uppercase ff-sans-cond text-white letter-spacing-2" href="technology.html"><span aria-hidden="true">02</span>Technology</a>
           </li>
         </ul>
       </nav>
   </header>
 
-    <div class="grid-container grid-container--home">
+    <main id="main" class="grid-container grid-container--home">
       <div class="flow">
         <h1 class="fs-500 ff-sans-cond uppercase letter-spacing-1 text-accent">
           So, you want to travel to 
@@ -68,6 +68,7 @@
       <div>
         <a href="#" class="large-button uppercase ff-serif bg-white">Explore</a>
       </div>
-    </div>
+    </main>
+    
   </body>
 </html>
