@@ -605,7 +605,7 @@ select {
   font-size:1.75rem;
 }
 
-/* Crew layout */
+/* crew layout */
 .grid-container--crew{
   --flow-space:2rem;
   grid-template-areas:
@@ -618,13 +618,14 @@ select {
 .grid-container--crew > img{
   grid-area:image;
   max-width: 60%;
+  border-bottom: 1px solid hsl(var(--clr-white) / 0.1);
 }
 
 .grid-container--crew > .dot-indicators{
   grid-area:dots;
 }
 
-.grid-container--crew > .crew-info{
+.grid-container--crew > .crew-details{
   grid-area:content;
 }
 
@@ -639,7 +640,16 @@ select {
     flex-direction:row;
     justify-content: space-evenly;
   }
+  .grid-container--crew{
+    padding-bottom: 0;
+    grid-template-areas:
+    'title'
+    'content'
+    'dots'
+    'image'
+  }
 }
+
 
 @media (min-width: 45em) {
   .grid-container {
@@ -686,7 +696,7 @@ select {
     justify-content: start;
     align-content: start;
     grid-template-areas:
-    '. title image .'
+    '. title title .'
     '. content image .'
     '. dots image .'
   }
@@ -695,4 +705,11 @@ select {
     max-width: 90%;
   }
 
+  .grid-container--crew > .dot-indicators{
+    justify-self: start;
+  }
+
+  .grid-container--crew > img{
+    align-self: end;
+  }
 }
