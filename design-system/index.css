@@ -681,4 +681,18 @@ select {
     --gap: min(5vw,6rem);
     justify-content: start;
   }
+
+  .grid-container--crew{
+    justify-content: start;
+    align-content: start;
+    grid-template-areas:
+    '. title image .'
+    '. content image .'
+    '. dots image .'
+  }
+
+  .grid-container--crew > img{
+    max-width: 90%;
+  }
+
 }
