@@ -22,7 +22,8 @@
       href="./assets/favicon-32x32.png"
     />
 
-    <script src="./index.js" defer></script>
+    <script src="./navigation.js" defer></script>
+    <script src="./tabs.js" defer></script>
     <title>Frontend Mentor | Space tourism website</title>
   </head>
   <body class="crew">
@@ -82,7 +83,10 @@
 
     <main id="main" class="grid-container grid-container--crew flow">
       <h1 class="numbered-title"><span aria-hidden="true">02</span>Meet your crew</h1>
+      <picture>
+        <source srcset="./assets/crew/image-douglas-hurley.webp" type="image/webp">
       <img src="./assets/crew/image-douglas-hurley.png" alt="Douglas Hurley" />
+      </picture>
 
       <div class="dot-indicators flex">
         <button aria-selected="true"><span class="sr-only">The commander</span></button>

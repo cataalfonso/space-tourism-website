@@ -658,7 +658,7 @@ select {
   'content'
 }
 
-.grid-container--crew > img{
+.grid-container--crew > picture{
   grid-area:image;
   max-width: 60%;
   border-bottom: 1px solid hsl(var(--clr-white) / 0.1);
@@ -730,7 +730,7 @@ select {
     '. image content .'
   }
 
-  .grid-container--destination > img{
+  .grid-container--destination > picture{
     max-width: 90%;
   }
 
@@ -748,15 +748,14 @@ select {
     '. dots image .'
   }
 
-  .grid-container--crew > img{
+  .grid-container--crew > picture{
     max-width: 90%;
+    align-self: end;
   }
 
   .grid-container--crew > .dot-indicators{
     justify-self: start;
   }
 
-  .grid-container--crew > img{
-    align-self: end;
-  }
+
 }
