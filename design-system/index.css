@@ -627,6 +627,7 @@ select {
 .grid-container--destination > picture{
   grid-area:image;
   max-width: 60%;
+  align-self: start;
 }
 
 .grid-container--destination > .tab-list{
@@ -702,10 +703,7 @@ select {
   .grid-container {
     text-align: left;
     column-gap: var(--container-gap, 2rem);
-    grid-template-columns: minmax(2rem, 1fr) repeat(2, minmax(0, 40rem)) minmax(
-        2rem,
-        1fr
-      );
+    grid-template-columns: minmax(2rem, 1fr) repeat(2, minmax(0, 40rem)) minmax(2rem,1fr);
   }
 
   .grid-container--home {
@@ -722,7 +720,7 @@ select {
   }
 
   .grid-container--destination{
-    justify-content: start;
+    justify-items: start;
     align-content: start;
     grid-template-areas:
     '. title title .'
@@ -740,7 +738,8 @@ select {
   }
 
   .grid-container--crew{
-    justify-content: start;
+    grid-template-columns: minmax(2rem, 1fr) minmax(0,40rem) minmax(0,20rem) minmax(2rem,1fr);
+    justify-items: start;
     align-content: start;
     grid-template-areas:
     '. title title .'
@@ -749,8 +748,9 @@ select {
   }
 
   .grid-container--crew > picture{
-    max-width: 90%;
+    grid-column:span 2;
     align-self: end;
+    max-width: 80%;
   }
 
   .grid-container--crew > .dot-indicators{
