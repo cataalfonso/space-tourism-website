@@ -510,6 +510,7 @@ select {
   display: inline-grid;
   z-index: 1;
   place-items: center;
+  font-size: 0.75rem;
   padding: 0 1.25rem;
   font-size: var(--fs-600);
   border: 1px solid hsl(var(--clr-white) / 0.25);
@@ -809,14 +810,20 @@ select {
   }
 
   .grid-container--technology{
-    grid-template-columns: minmax(2rem, 1fr)  minmax(2rem,3rem) minmax(0,40rem) minmax(0,20rem);
+    grid-template-columns: minmax(2rem, 10rem)  minmax(2rem,3rem) minmax(40rem,1fr) minmax(20rem,1fr);
     grid-template-areas:
     '. title title .'
+    '. . . image'
     '. dots content image'
   }
 
   .grid-container--technology > .numbered-indicators {
-    display: grid ;
+    display:inline;
+    place-self: stretch center;
+
+  }
+  .grid-container--technology > .numbered-indicators> * {
+  margin-bottom: 2rem;
   }
 
 
