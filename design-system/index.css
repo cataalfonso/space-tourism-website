@@ -710,8 +710,10 @@ select {
 
 .grid-container--technology > picture{
   grid-area:image;
-  padding-inline: 0;
-  width:fit-content;
+  padding-inline:0;
+  margin-inline:0;
+  justify-self: stretch;
+  max-width: 100%;
   /*how to make the image 100% screen width??*/
 }
 

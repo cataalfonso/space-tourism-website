@@ -36,7 +36,6 @@ function changeTabFocus(e) {
 
 function changeTabPanel(e) {
     const targetTab = e.target;
-    console.log(e.target);
     const targetPanel = targetTab.getAttribute("aria-controls");
     const targetImage = targetTab.getAttribute("data-image");
 
