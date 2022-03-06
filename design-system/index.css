@@ -99,7 +99,7 @@ html:focus-within {
 body {
   font-family: var(--ff-sans-normal);
   font-size: var(--fs-400);
-  color: hsl(var(--clr-white));
+  color: hsl(var(--clr-light));
   background-color: hsl(var(--clr-dark));
   min-height: 100vh;
   text-rendering: optimizeSpeed;
@@ -300,6 +300,7 @@ select {
 .numbered-title {
   font-family: var(--ff-sans-cond);
   font-size: var(--fs-500);
+  color:hsl(var(--clr-white));
   text-transform: uppercase;
   letter-spacing: 4.72px;
 }
@@ -659,6 +660,10 @@ select {
   grid-area:content;
 }
 
+.grid-container--destination >article> h2{
+  color:hsl(var(--clr-white));
+}
+
 .destination-meta{
   flex-direction:column;
   border-top: 1px solid hsl(var(--clr-white) / 0.1);
@@ -668,6 +673,7 @@ select {
 
 .destination-meta p{
   font-size:1.75rem;
+  color: hsl(var(--clr-white));
 }
 
 /* crew layout */
@@ -694,8 +700,12 @@ select {
   grid-area:content;
 }
 
-.crew-details h2{
+.crew-details header > h2{
   color: hsl(var(--clr-white) / 0.5)
+}
+
+.crew-details header > p{
+  color: hsl(var(--clr-white))
 }
 
 /* Technology layout */
@@ -727,10 +737,13 @@ select {
   grid-area:content;
 }
 
-.technology-details h2{
+.technology-details header > h2{
   color: hsl(var(--clr-white) / 0.5)
 }
 
+.technology-details header > p{
+  color: hsl(var(--clr-white))
+}
 
 
 @media (min-width: 35em) {
