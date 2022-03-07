@@ -623,12 +623,12 @@ select {
   text-align: center;
   display: grid;
   place-items: center;
-  padding-inline: 1rem;
   padding-bottom: 4rem;
 }
 
 .grid-container p:not([class]) {
   max-width: 50ch;
+  padding-inline: 1rem;
 }
 
 .numbered-title{
@@ -639,6 +639,7 @@ select {
 
 .grid-container--destination{
   --flow-space:2rem;
+  padding-inline: 1rem;
   grid-template-areas:
   'title'
   'image'
@@ -679,6 +680,7 @@ select {
 /* crew layout */
 .grid-container--crew{
   --flow-space:2rem;
+  padding-inline: 1rem;
   grid-template-areas:
   'title'
   'image'
@@ -727,14 +729,20 @@ select {
   /*how to make the image 100% screen width??*/
 }
 
+.grid-container--technology > .numbered-title{
+  padding-inline: 1rem;
+} 
+
 .grid-container--technology > .numbered-indicators{
   display:flex;
+  padding-inline: 1rem;
   grid-area:dots;
   font-size: 0.75rem;
 }
 
 .grid-container--technology > .technology-details{
   grid-area:content;
+  padding-inline: 1rem;
 }
 
 .technology-details header > h2{
